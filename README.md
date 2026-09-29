@@ -1,4 +1,4 @@
-# Forever UI · v1.3.7
+# Forever UI · v1.3.8
 
 Een rustige, bewerkbare UI voor WoW Forever (interface 16001), met extra's voor feral druids.
 
@@ -49,6 +49,10 @@ Je keybinds blijven die van Blizzard. Je stelt ze in via **Esc → Key Bindings*
 - Formbalk = *Special Action Button* (stance)
 
 Als Clearcasting actief is, lichten Shred, Ravage, Maul en Swipe op.
+
+## Nieuw in v1.3.8
+
+- **Fix:** NPC's en monsters hadden in 1.3.7 geen naam op het targetframe.
 
 ## Nieuw in v1.3.7
 

@@ -780,8 +780,15 @@ function T:Update()
   if not UnitExists("target") then return end
   -- Players: full name with surname, like the player frame. NPCs and
   -- players without one: the plain name.
-  local full = ns.Plain(UnitIsPlayer("target")) and UnitPVPName and UnitPVPName("target")
-  if ns.Has(full) then ns.SetText(f.name, full) else ns.SetText(f.name, UnitName("target")) end
+  -- (For an NPC the and-chain gives `false`, which is not a name: check for
+  -- an actual value, or the frame ended up with an empty name.)
+  local full
+  if ns.Plain(UnitIsPlayer("target")) and UnitPVPName then full = UnitPVPName("target") end
+  if full ~= nil and full ~= false and ns.Has(full) then
+    ns.SetText(f.name, full)
+  else
+    ns.SetText(f.name, UnitName("target"))
+  end
   f.name:SetTextColor(1, 1, 1)
 
   local r, g, b = 0.05, 0.85, 0.1
