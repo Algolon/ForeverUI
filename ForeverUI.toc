@@ -1,7 +1,7 @@
 ## Interface: 16001
 ## Title: |cffff7c0aForever|r UI
 ## Notes: A calm, editable UI with extras for feral druids. Type /fui.
-## Version: 1.3.6
+## Version: 1.3.7
 ## SavedVariables: ForeverUIDB
 
 Core.lua
